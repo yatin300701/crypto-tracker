@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import { Button, Form, Table } from "react-bootstrap";
+import { Route } from "react-router-dom";
 import { Pagination } from "react-bootstrap";
 import { CryptoState } from "../../Cryptocontext";
 import "../../styles/coinlist.css";
@@ -48,7 +49,27 @@ export default function CoinList() {
       });
   }, [Currency, page]);
 
+  let prebtn;
+  let nextbtn;
   console.log(coinlist, totalpage);
+  if (page === 1) {
+    prebtn = "";
+  } else {
+    prebtn = (
+      <button className="btn-coinlist-btm" onClick={handlePre}>
+        Pre
+      </button>
+    );
+  }
+  if (page === 8) {
+    nextbtn = "";
+  } else {
+    nextbtn = (
+      <button className="btn-coinlist-btm" onClick={handleNext}>
+        Next
+      </button>
+    );
+  }
 
   return (
     <>
@@ -77,6 +98,7 @@ export default function CoinList() {
               <th>Price</th>
               <th>Change</th>
               <th>Market Cap</th>
+              <th>Chart</th>
             </tr>
           </thead>
           <tbody>
@@ -93,6 +115,9 @@ export default function CoinList() {
                   <td>
                     {coin.market_cap} {currency_symbol}
                   </td>
+                  <td>
+                    <a href={`/page/${coin.id}`}>Link</a>
+                  </td>
                 </tr>
               );
             })}
@@ -100,14 +125,8 @@ export default function CoinList() {
         </Table>
         <br />
         <div className="btn-container-coinlist">
-          {
-            <button className="btn-coinlist-btm" onClick={handlePre}>
-              Pre
-            </button>
-          }
-          <button className="btn-coinlist-btm" onClick={handleNext}>
-            Next
-          </button>
+          {prebtn}
+          {nextbtn}
         </div>
       </div>
     </>

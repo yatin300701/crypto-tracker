@@ -38,6 +38,9 @@
   width: 90vw;
   margin: 0 auto;
 }
+.table a {
+  text-decoration: none;
+}
 .btn-coinlist-btm {
   width: 60px;
   height: 60px;

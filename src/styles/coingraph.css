@@ -1,0 +1,35 @@
+.coingraph-container {
+  display: flex;
+  flex-direction: row;
+}
+.coingraph_sidebar {
+  width: 30%;
+  margin: 20px 20px;
+}
+
+.coin_image_coingraph {
+  width: 15rem;
+  height: 15rem;
+}
+.coingraph-name {
+  font-size: 3rem;
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.coingraph_img,
+.coingraph-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.coingraph-rank span,
+.coingraph-cuurent-price span,
+.coingraph-market-cap span {
+  text-transform: capitalize;
+  font-weight: 800;
+}
+.coingraph-rank,
+.coingraph-cuurent-price,
+.coingraph-market-cap {
+  margin: 2.5rem 0;
+}
