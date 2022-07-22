@@ -1,0 +1,15 @@
+.nav {
+  display: flex;
+  justify-items: center;
+}
+.nav-title {
+  color: gold !important;
+  font-weight: 700;
+  cursor: pointer;
+}
+#basic-nav-dropdown {
+  color: aliceblue;
+}
+.navbar-expand .navbar-collapse {
+  justify-content: flex-end;
+}

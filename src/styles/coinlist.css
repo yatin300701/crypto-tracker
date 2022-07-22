@@ -1,0 +1,51 @@
+.coinlist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: black;
+  color: aliceblue;
+  height: 100%;
+}
+.coinlist-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+.btn-coinlist {
+  height: 40px;
+}
+.me-2 {
+  width: 300px;
+  margin: 20px 0;
+}
+.search-list {
+  display: flex;
+  align-items: center;
+}
+.coin_name {
+  text-transform: capitalize;
+  display: flex;
+  align-items: center;
+}
+.coin_name img {
+  margin-right: 2rem;
+}
+.table {
+  width: 90vw;
+  margin: 0 auto;
+}
+.btn-coinlist-btm {
+  width: 60px;
+  height: 60px;
+  /* bcolor: white; */
+  border-radius: 50%;
+  margin: 40px;
+}
+.btn-container-coinlist {
+  display: flex;
+  justify-content: space-around;
+}
